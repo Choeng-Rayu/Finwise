@@ -1,25 +1,23 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import sequelize from './src/config/database.js';
+import express from "express";
+import cors from "cors";
+import sequelize from "./src/config/database.js";
 
 const app = express();
 const port = 3000;
 
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 async function start() {
   try {
     await sequelize.authenticate();
-    console.log('Database connection has been established successfully.');
-
+    console.log("Database connection has been established successfully.");
     app.listen(port, () => {
       console.log(`Server is running on http://localhost:${port}`);
     });
   } catch (error) {
-    console.error('Unable to connect to the database:', error);
+    console.error("Unable to connect to the database:", error);
     process.exit(1);
   }
 }
