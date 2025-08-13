@@ -1,5 +1,5 @@
-import React from 'react';
-import '../style/homePage.css';
+import React from "react";
+import "../style/homePage.css";
 
 const HomePage = () => {
   return (
@@ -7,20 +7,28 @@ const HomePage = () => {
       <nav className="navbar">
         <div className="navbar-logo">Finwise</div>
         <ul className="navbar-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#features">Features</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
       <header>
         <h1 className="welcome">Welcome to Finwise</h1>
       </header>
       <main>
-        <p className="text">
+        <p className="text-blue-600">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
