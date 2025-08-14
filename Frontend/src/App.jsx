@@ -1,13 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import HomePage from './components/homePage.jsx';
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './index.css';
+import Home from './pages/Home';
+import Analyst from './pages/Analyst';
+import Dashboard from './pages/Dashboard';
+import BudgetPlan from './pages/BudgetPlan';
 
 function App() {
   return (
-    <HomePage />
+    <Routes>
+      <Route path='/' element={< BudgetPlan />} />
+      <Route path='/Home' element={< Home />} />
+      <Route path='/BudgetPlan' element={< BudgetPlan />} />
+      <Route path='/Dashboard' element={< Dashboard />} />
+      <Route path='/Analyst' element={< Analyst />} />
+    </Routes>
   );
-}
+};
 
-export default App
+export default App;

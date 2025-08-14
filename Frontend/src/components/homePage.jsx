@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:Frontend/src/components/homePage.jsx
 import '../styles/homePage.css';
+=======
+import '../index.css';
+>>>>>>> f290492c895fcbaf5ec6917f255c0aa549c5ca7d:Frontend/src/component/homePage.jsx
 
 const HomePage = () => {
   return (
@@ -9,7 +13,7 @@ const HomePage = () => {
         <ul className="navbar-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="/BudgetPlan">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -17,7 +21,7 @@ const HomePage = () => {
         <h1 className="welcome">Welcome to Finwise</h1>
       </header>
       <main>
-        <p className="welcome-text">
+        <p className="text-amber-300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
