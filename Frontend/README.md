@@ -39,6 +39,9 @@ Make sure your vite.config.js file look like this:
 
 now you can enjoy with tailwindcss in your project keep going!
 
+5. Install react-router-dom:
+    - npm install react-router-dom
+
 Don't forget to test with command:
     - npm run dev 
 or

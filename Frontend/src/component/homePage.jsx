@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/homePage.css';
+import '../index.css';
 
 const HomePage = () => {
   return (
@@ -17,7 +17,7 @@ const HomePage = () => {
         <h1 className="welcome">Welcome to Finwise</h1>
       </header>
       <main>
-        <p className="text">
+        <p className="text-amber-300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
