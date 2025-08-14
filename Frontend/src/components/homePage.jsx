@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:Frontend/src/component/homePage.jsx
 import '../index.css';
+=======
+import '../styles/homePage.css';
+>>>>>>> a2da0296ecc76f30c35a20e1037cd88654078c7a:Frontend/src/components/homePage.jsx
 
 const HomePage = () => {
   return (

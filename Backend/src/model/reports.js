@@ -1,4 +1,3 @@
-import { data } from "react-router-dom";
 import sequelize from "../config/database.js";
 import { DataTypes } from "sequelize";
 import User from "./users.js";
@@ -20,6 +19,11 @@ const Report = sequelize.define("Report", {
   endDate: {
     type: DataTypes.DATEONLY,
     allowNull: false,
+  },
+  filePath: {
+    // optional, to store generated PDF path or URL
+    type: DataTypes.STRING,
+    allowNull: true,
   },
   userId: {
     type: DataTypes.INTEGER,
