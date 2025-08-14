@@ -21,6 +21,11 @@ const Report = sequelize.define("Report", {
     type: DataTypes.DATEONLY,
     allowNull: false,
   },
+  filePath: {
+    // optional, to store generated PDF path or URL
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
   userId: {
     type: DataTypes.INTEGER,
     allowNull: false,
