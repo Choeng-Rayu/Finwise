@@ -9,7 +9,8 @@ import BudgetPlan from './pages/BudgetPlan';
 function App() {
   return (
     <Routes>
-      <Route path='/' element={< Home />} />
+      <Route path='/' element={< BudgetPlan />} />
+      <Route path='/Home' element={< Home />} />
       <Route path='/BudgetPlan' element={< BudgetPlan />} />
       <Route path='/Dashboard' element={< Dashboard />} />
       <Route path='/Analyst' element={< Analyst />} />
