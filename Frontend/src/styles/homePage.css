@@ -67,20 +67,23 @@ body {
 
 /* Header styles */
 .finwise-container header h1 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   color: #ffffff;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 .welcome{
-    font-size: 2.5rem;
+    font-size: 6rem;
     color: #ffffff;
     margin-top: 10rem;
     text-align: center;
 }
 /* Welcome text styles */
 .welcome-text {
-  margin-top: 10rem;
+  font-size: 1.5rem;
+  margin: 35rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   text-align: justify;
 }
 
@@ -94,25 +97,31 @@ body {
 /* Button styles */
 .action-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 8rem;
   justify-content: center;
 }
 
 .btn {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
   padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 4px;
-  font-size: 1rem;
+  border-radius: 10px;
+  font-size: 2rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btn.primary {
+  height: 5rem;
+  width: 15rem;
   background-color: #3498db;
   color: white;
 }
 
 .btn.secondary {
+  height: 5rem;
+  width: 14rem;
   background-color: #ecf0f1;
   color: #2c3e50;
 }
