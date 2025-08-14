@@ -5,9 +5,9 @@ const Analyst= () => {
 
 
     return (
-        <>
-        
-        </>
+        <Layout>
+            {/* Your code here */}
+        </Layout>
     );
 };
 

@@ -1,16 +1,15 @@
 import React from "react";
 import '../index.css';
+import Layout from "../component/Layout";
 
-const Home = () => {
+const Expense = () => {
 
 
     return (
-        <>
         <Layout>
             {/* Your code here */}
         </Layout>
-        </>
     );
 };
 
-export default Home;
+export default Expense;
