@@ -1,13 +1,13 @@
 import sequelize from "../config/database.js";
 import setupAssociation from "../model/associatoin.js";
 
-import createUser from "./createUser.js";
-import createGoal from "./createGoal.js";
-import createReport from "./createReport.js";
-import createBudget from "./createBudget.js";
-import createCategory from "./createCategory.js";
-import createCurrency from "./createCurrency.js";
-import createTransaction from "./createTransaction.js";
+import createUser from "./UserSeed.js";
+import createGoal from "./GoalSeed.js";
+import createReport from "./ReportSeed.js";
+import createBudget from "./BudgetSeed.js";
+import createCategory from "./CategorySeed.js";
+import createCurrency from "./CurrencySeed.js";
+import createTransaction from "./TransactionSeed.js";
 
 const runSeed = async () => {
   try {

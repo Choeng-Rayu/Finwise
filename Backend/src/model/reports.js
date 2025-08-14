@@ -1,4 +1,3 @@
-import { data } from "react-router-dom";
 import sequelize from "../config/database.js";
 import { DataTypes } from "sequelize";
 import User from "./users.js";
