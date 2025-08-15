@@ -8,7 +8,10 @@ const Layout = ({ children }) => {
   return (
     <div className="flex bg-gray-100">
       {/* Sidebar */}
-      <Sidebar isOpen={isSidebarOpen} />
+      <Sidebar 
+        isOpen={isSidebarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
+      />
 
       {/* Main Content */}
       <div className="flex flex-col w-full">
