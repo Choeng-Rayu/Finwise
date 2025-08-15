@@ -1,4 +1,5 @@
 import React from 'react';
+import '../index.css';
 import '../styles/homePage.css';
 
 const HomePage = () => {
@@ -9,7 +10,7 @@ const HomePage = () => {
         <ul className="navbar-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="/BudgetPlan">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -17,7 +18,7 @@ const HomePage = () => {
         <h1 className="welcome">Welcome to Finwise</h1>
       </header>
       <main>
-        <p className="welcome-text">
+        <p className="text-amber-300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
