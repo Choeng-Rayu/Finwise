@@ -59,4 +59,3 @@ export default async function createGoal() {
     console.log("Insert data unsuccessful", err);
   }
 }
-createGoal();

@@ -49,4 +49,3 @@ export default async function createReport(params) {
     console.log("Insert data unsuccessful", err);
   }
 }
-createReport();

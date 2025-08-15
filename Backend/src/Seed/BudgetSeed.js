@@ -59,4 +59,3 @@ export default async function createBudget() {
     console.log("Insert data unsuccessful", err);
   }
 }
-createBudget();

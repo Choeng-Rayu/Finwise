@@ -44,4 +44,3 @@ export default async function createCategory() {
     console.log("Insert data unsuccessful");
   }
 }
-createCategory();

@@ -64,4 +64,3 @@ export default async function createTransaction() {
     console.log("Insert data unsuccessful", err);
   }
 }
-createTransaction();

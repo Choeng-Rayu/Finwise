@@ -49,4 +49,3 @@ export default async function createUser() {
     console.log("Insert data unsuccessful", err);
   }
 }
-createUser();

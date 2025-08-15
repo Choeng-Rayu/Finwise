@@ -16,4 +16,3 @@ export default async function createCurrency() {
     console.log("Insert data unsuccessful", err);
   }
 }
-createCurrency();
