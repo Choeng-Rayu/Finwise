@@ -8,6 +8,7 @@ const Dashboard = () => {
     return (
         <Layout>
             {/* Your code here */}
+            Your code here
         </Layout>
     );
 };

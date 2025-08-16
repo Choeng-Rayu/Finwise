@@ -2,7 +2,7 @@ import React from "react";
 import '../index.css';
 import Layout from "../components/Layout";
 
-const Report = () => {
+const Account = () => {
 
 
     return (
@@ -13,4 +13,4 @@ const Report = () => {
     );
 };
 
-export default Report;
+export default Account;

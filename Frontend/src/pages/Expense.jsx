@@ -8,6 +8,7 @@ const Expense = () => {
     return (
         <Layout>
             {/* Your code here */}
+            Your code here
         </Layout>
     );
 };

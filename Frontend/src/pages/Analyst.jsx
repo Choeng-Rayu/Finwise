@@ -1,12 +1,14 @@
 import React from "react";
 import '../index.css';
+import Layout from "../components/Layout";
 
-const Analyst= () => {
+const Analyst = () => {
 
 
     return (
         <Layout>
             {/* Your code here */}
+            Your code here
         </Layout>
     );
 };
