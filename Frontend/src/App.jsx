@@ -13,7 +13,7 @@ import Setting from './pages/Setting';
 function App() {
   return (
     <Routes>
-      <Route path='/' element={< BudgetPlan />} />
+      <Route path='/' element={< Home />} />
       <Route path='/home' element={< Home />} />
       <Route path='/budgetPlan' element={< BudgetPlan />} />
       <Route path='/dashboard' element={< Dashboard />} />

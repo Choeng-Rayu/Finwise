@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import {
+  Home,
   LayoutDashboard,
   HandCoins,
   CircleDollarSign,
@@ -41,6 +42,7 @@ const Sidebar = ({ isOpen, setIsSidebarOpen }) => {
   }, [isOpen, setIsSidebarOpen]);
 
   const menuItems = [
+    { name: "Home", path: "/home", icon: <Home size={20} /> },
     { name: "Dashboard", path: "/dashboard", icon: <LayoutDashboard size={20} /> },
     { name: "Overview", path: "/overview", icon: <BarChart2 size={20} /> },
     { name: "Expense", path: "/expense", icon: <HandCoins size={20} /> },

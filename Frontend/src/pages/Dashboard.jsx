@@ -3,12 +3,12 @@ import '../index.css';
 import Layout from "../components/Layout";
 
 const Dashboard = () => {
-
+   
 
     return (
         <Layout>
             {/* Your code here */}
-            Your code here
+            Your Code Here
         </Layout>
     );
 };
