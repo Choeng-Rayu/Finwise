@@ -46,12 +46,16 @@ const BudgetPlan = () => {
   const [tab, setTab] = useState("overview");
 
   const expenseCategories = [
-    { name: "Food", budget: 150, todaySpent: 17.55, remain: 75.78, status: "on track"},
-    { name: "Entertainment", budget: 75, todaySpent: 5.00, remain: 46.50, status: "on track"},
-    { name: "Transport", budget: 50, todaySpent: 3.50, remain: 39.23, status: "on track"},
-    { name: "Shopping", budget: 100, todaySpent: 0.00, remain: 86.00, status: "on track"},
-    { name: "Learning", budget: 50, todaySpent: 20, remain: 6, status: "near limit"},
-  ]
+    { name: "Food", budget: 300.00, todaySpent: 17.55, remain: 150.78, status: "on track" },
+    { name: "Entertainment", budget: 250.00, todaySpent: 15.00, remain: 146.50, status: "on track" },
+    { name: "Transport", budget: 150.00, todaySpent: 8.50, remain: 89.23, status: "on track" },
+    { name: "Shopping", budget: 400.00, todaySpent: 20.00, remain: 336.00, status: "on track" },
+    { name: "Learning", budget: 200.00, todaySpent: 40.00, remain: 56.00, status: "near limit" },
+    { name: "Health", budget: 250.00, todaySpent: 25.00, remain: 175.00, status: "on track" },
+    { name: "Travel", budget: 200.00, todaySpent: 30.00, remain: 120.00, status: "on track" },
+    { name: "Others", budget: 149.73, todaySpent: 10.00, remain:  -64.78, status: "over limit" }
+  ];
+  
 
   // Goals 
   const goals = [
@@ -63,6 +67,9 @@ const BudgetPlan = () => {
   const budgetProgressColor = (progress) => {
     if ( progress < 50 ) {
       return `hsl(${120 - (progress * 1.2)}, 100%, 45%)`;
+    }
+    else if ( progress > 100 ) {
+      return `hsl(0, 100%, 50%)`;
     }
     else {
       return `hsl(${60 - ((progress - 50) * 1.2)}, 100%, 50%)`;
@@ -167,7 +174,7 @@ const BudgetPlan = () => {
                       const spent = (budgetCategory.budget - budgetCategory.remain).toFixed(2);
                       const progress = (spent / budgetCategory.budget) * 100;
                       return (
-                        <div key={i}>
+                        <div key={i} className="mb-3">
                         <div className="flex justify-between text-sm text-gray-600 mb-1">
                           <span>{budgetCategory.name}</span>
                           <span>${spent} / ${budgetCategory.budget}</span>
@@ -191,33 +198,53 @@ const BudgetPlan = () => {
                     <div className="space-y-2 lg:col-span-2 bg-white rounded-xl">
                         <div className="overflow-x-auto">
                         <table className="w-full text-sm text-left">
-                            <thead className="border-b text-gray-500 uppercase text-xs tracking-wider">
-                            <tr>
-                                <th className="pb-2">Category</th>
-                                <th className="pb-2">Monthly Limit</th>
-                                <th className="pb-2">Spent Today</th>
-                                <th className="pb-2">Remaining</th>
-                                <th className="pb-2">Status</th>
-                            </tr>
+                            <thead className="bg-gray-100 text-gray-600 uppercase text-xs tracking-wider">
+                              <tr>
+                                <th className="px-4 py-3 text-left">Category</th>
+                                <th className="px-4 py-3 text-left">Budget</th>
+                                <th className="px-4 py-3 text-left">Spent</th>
+                                <th className="px-4 py-3 text-left">Remaining</th>
+                                <th className="px-4 py-3 text-left">Status</th>
+                              </tr>
                             </thead>
-                            <tbody className="text-gray-700">
-                            {expenseCategories.map((budgetCategory, i) => (
-                                <tr key={i} className="border-b hover:bg-gray-50">
-                                <td className="py-3 font-medium">{budgetCategory.name}</td>
-                                <td>${budgetCategory.budget}</td>
-                                <td>${(budgetCategory.budget - budgetCategory.remain).toFixed(2)}</td>
-                                <td className="font-semibold text-blue-600">${budgetCategory.remain}</td>
-                                <td
-                                    className={`${
-                                    budgetCategory.status === "on track"
-                                        ? "text-green-600"
-                                        : "text-red-500"
-                                    } font-medium`}
+                            <tbody className="text-gray-700 divide-y divide-gray-100">
+                              {expenseCategories.map((budgetCategory, i) => (
+                                <tr
+                                  key={i}
+                                  className={`${
+                                    budgetCategory.remain < 0
+                                      ? "bg-red-100 hover:bg-red-200"
+                                      : "hover:bg-gray-50"
+                                  } transition-colors`}
                                 >
-                                    {budgetCategory.status}
-                                </td>
+                                  <td className="px-4 py-3 font-medium">{budgetCategory.name}</td>
+                                  <td className="px-4 py-3">${budgetCategory.budget.toFixed(2)}</td>
+                                  <td className="px-4 py-3">${(budgetCategory.budget - budgetCategory.remain).toFixed(2)}</td>
+                                  <td
+                                    className={`px-4 py-3 font-semibold ${
+                                      budgetCategory.remain < 0 ? "text-red-600" : "text-blue-600"
+                                    }`}
+                                  >
+                                    {budgetCategory.remain < 0
+                                      ? `- $${Math.abs(budgetCategory.remain).toFixed(2)}`
+                                      : `$${budgetCategory.remain.toFixed(2)}`}
+                                  </td>
+                                  <td className="px-4 py-3">
+                                    <span
+                                      className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                                        {
+                                          "on track": "bg-blue-100 text-blue-600",
+                                          "completed": "bg-green-100 text-green-600",
+                                          "near limit": "bg-amber-100 text-amber-600",
+                                          "over limit": "bg-red-200 text-red-600",
+                                        }[budgetCategory.status] || "bg-gray-100 text-gray-600"
+                                      }`}
+                                    >
+                                      {budgetCategory.status}
+                                    </span>
+                                  </td>
                                 </tr>
-                            ))}
+                              ))}
                             </tbody>
                         </table>
                         </div>
