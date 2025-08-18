@@ -1,15 +1,10 @@
 import React from "react";
+import HomePage from "../components/homePage";
 import '../index.css';
 
 const Home = () => {
-
-
     return (
-        <>
-        <Layout>
-            {/* Your code here */}
-        </Layout>
-        </>
+        <HomePage />
     );
 };
 
