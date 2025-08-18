@@ -9,7 +9,7 @@ dotenv.config();
 import setupAssociation from "./src/model/associatoin.js";
 import passport from "./src/config/passport.js";
 import authRoutes from "./src/routes/auth.js";
-
+import TransactionRouter from "./src/routes/TransactionRoute.js";
 const app = express();
 const port = 3000;
 
@@ -51,7 +51,8 @@ app.use("/api/auth", authRoutes);
 app.get("/", (req, res) => {
   res.json({ message: "Finwise API is running!" });
 });
-
+// Transaction Routes
+app.use("/api", TransactionRouter);
 async function start() {
   try {
     // Setup database associations
@@ -61,9 +62,9 @@ async function start() {
     await sequelize.authenticate();
     console.log("Database connection has been established successfully.");
 
-    // Sync database (create tables if they don't exist)
-    await sequelize.sync({ alter: true });
-    console.log("Database synchronized successfully.");
+    // // Sync database (create tables if they don't exist)
+    // await sequelize.sync({ alter: true });
+    // console.log("Database synchronized successfully.");
 
     // Start server
     app.listen(port, () => {
