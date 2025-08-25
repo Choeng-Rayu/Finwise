@@ -11,4 +11,4 @@ coverage
 .env.test.local
 .env.production.local
 dist
-*.log
+.log
